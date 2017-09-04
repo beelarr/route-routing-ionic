@@ -1,5 +1,20 @@
-<h1>{{brpkyName}}</h1>
-<figure>
-    <img ng-src="{{brpkwyPic}}" alt="{{brpkyName}}" width="300px"/>
-    <figcaption>{{brpkyDesc}}</figcaption>
-</figure>
+
+
+
+
+
+<ion-view view-title="{{brpkyName}}">
+  <ion-content class="padding">
+    <div class="list card"
+      <div class="item item-image">
+        <img src="{{brpkyPic}}" width="300px">
+      </div>
+      <div class="item item-body">
+        <figcaption>{{brpkyDesc}}</figcaption>
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+      </div>
+</ion-content>
+</ion-view>
