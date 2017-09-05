@@ -1,6 +1,19 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope, $cordovaGeolocation) {
+  app.run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
+      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+      // for form inputs)
+      if(window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      }
+      if(window.StatusBar) {
+        StatusBar.styleDefault();
+      }
+    });
+  });
+
   $scope.brpkyName = "Blue Ridge Parkway";
   $scope.brpkyDesc = "The Blue Ridge Parkway is a National Parkway and All-American Road in the United States, noted for its scenic beauty.";
   $scope.brpkyPic = "./img/brpkwy.jpg";
